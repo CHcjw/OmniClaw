@@ -80,7 +80,7 @@
 - 学习点：aiosqlite 异步事务
 - 验收：首次启动自动建库
 
-### 1.5：数据模型
+### 1.5：数据模型(DTO)
 
 - 目标：定义 Pydantic Schema
 - 主要文件：`backend/app/models/schemas.py`

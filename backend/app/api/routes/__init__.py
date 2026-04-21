@@ -1,4 +1,4 @@
-﻿"""路由包导出。"""
+﻿"""路由包导出"""
 
 from .runtime import router as runtime_router
 

@@ -15,7 +15,6 @@ async def lifespan(_: FastAPI):
     yield
     # 当前无额外清理逻辑，后续可在这里关闭连接池等资源
 
-
 app = FastAPI(
     title="Omni Claw API",
     version="0.1.0",
