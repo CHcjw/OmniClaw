@@ -1,26 +1,52 @@
+﻿# Python virtual environments
+.venv/
 venv/
 env/
-.venv/
 
+# Secrets
 .env
 
+# Python cache / build artifacts
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-logs/
-session/
-*.jsonl
+# Packaging
+*.egg-info/
+dist/
+build/
+
+# Logs / runtime data
+.logs/
+.tasks/
+.team/
+.worktrees/
 *.log
 
-workspace/state.sqlite3
+# SQLite / local state
+workspace/*.db
 *.sqlite3
 *.sqlite3-shm
 *.sqlite3-wal
 workspace/tasks.json
+workspace/state.sqlite3
 
-workspace/memory/*.md
-workspace/office
+# Workspace runtime outputs
+workspace/office/
 
-*.egg-info/
+# Frontend local deps / build
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/dist/
+
+# IDE / OS
+.vscode/
+.DS_Store
+Thumbs.db
