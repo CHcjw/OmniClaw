@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(jupyter kernelspec *)",
+      "Bash(python -m jupyter kernelspec list)",
+      "Bash(.venv/Scripts/python -c \"from langchain_core.messages import AIMessage; print\\('langchain_core OK'\\)\")",
+      "Bash(.venv/Scripts/python -m pip install ipykernel -q)",
+      "Bash(.venv/Scripts/python -m ipykernel install --user --name=omniclaw-venv --display-name=\"OmniClaw \\(.venv\\)\")"
+    ]
+  }
+}

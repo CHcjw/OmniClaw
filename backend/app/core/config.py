@@ -18,9 +18,9 @@ class Settings(BaseSettings):
     app_env: str = "dev"
 
     # Provider / Model
-    provider: str = "openai"
-    model_name: str = "qwen-max"
-
+    provider: str = Field(default="aliyun", alias="DEFAULT_PROVIDER")
+    model_name: str = Field(default="qwen-max", alias="DEFAULT_MODEL")
+    
     # 路径配置
     workspace_dir: str = "./workspace"
     logs_dir: str = "./logs"
@@ -28,7 +28,8 @@ class Settings(BaseSettings):
     db_path: str = "workspace/omniclaw.db"
 
     # 密钥（敏感）
-    openai_api_key: str | None = Field(default=None)
+    openai_api_key: str | None = Field(default=None, alias="OPENAI_API_KEY")
+    openai_api_base: str | None = Field(default=None, alias="OPENAI_API_BASE")
     anthropic_api_key: str | None = Field(default=None)
 
 @lru_cache()

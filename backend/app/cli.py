@@ -4,15 +4,17 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
+from backend.app.core.agent import run_once
 from backend.app.core.config import get_settings, mask_secret
 
 app = typer.Typer(help="Omni Claw CLI")
 
 @app.command()
 def run() -> None:
-    """主交互入口（占位）"""
-    # 这里先保留占位，后续接入 LangGraph 主循环。
-    typer.echo("Omni Claw run 命令已就绪")
+    """主交互入口"""
+    text = "你好，请介绍你自己"
+    reply = run_once(text)
+    typer.echo(reply)
 
 
 @app.command()
